@@ -1,0 +1,16 @@
+[
+    {
+        "id": "268939",
+        "name": "Sonali Shahi",
+        "email": "sonali@gmail.com",
+        "password": "Sonali@123",
+        "role": "admin"
+    },
+    {
+        "id": "285339",
+        "name": "Anshika",
+        "email": "anshika101@gmail.com",
+        "password": "Anshika@234",
+        "role": "staff"
+    }
+]
