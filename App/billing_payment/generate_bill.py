@@ -10,28 +10,33 @@ class BillGenerator:
     def generate_bill(self,order_id=None):
         
         validator=CommonValidation()
-
-        if order_id is None:
-            order_id = input("Enter Order ID: ")
+        while True:
+            if order_id is None:
+                order_id = input("Enter Order ID: ")
 
     
-        order_id_str = str(order_id)
-        order_id = validator.validate_order_id(order_id_str)
-        if order_id is None:
-            print("Invalid Order ID")
-            return
+            order_id_str = str(order_id)
+            order_id = validator.validate_order_id(order_id_str)
+            if order_id is None:
+                print("Invalid Order ID")
+                order_id = None  
+                continue  
 
-        orders = self.order_ops.read_orders()
 
-        order = None
-        for o in orders:
-            if o["order_id"] == order_id:
-                order = o
-                break
+            orders = self.order_ops.read_orders()
 
-        if order is None:
-            print("Order not found")
-            return
+            order = None
+            for o in orders:
+                if o["order_id"] == order_id:
+                    order = o
+                    break
+
+            if order is None:
+                print("Order not found")
+                order_id = None  
+                continue
+
+            break
 
         # Date & Time
         now = datetime.now()
@@ -42,7 +47,7 @@ class BillGenerator:
         final_total = subtotal + gst
 
         print("\n" + "=" * 50)
-        print("        ROYAL RESTAURANT  ")
+        print("              ROYAL RESTAURANT  ")
         print("=" * 50)
         print(f"Order ID : {order_id}")
         print(f"Date     : {date_time}")
