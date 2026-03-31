@@ -40,5 +40,40 @@
         ],
         "total_bill": 480.0,
         "status": "Pending"
+    },
+    {
+        "order_id": 6474642175,
+        "items": [
+            {
+                "item_id": "BF105",
+                "item_name": "Masala Dosa",
+                "quantity": 2,
+                "price": 150.0,
+                "total": 300.0
+            }
+        ],
+        "total_bill": 300.0,
+        "status": "Completed"
+    },
+    {
+        "order_id": 2578321218,
+        "items": [
+            {
+                "item_id": "BF104",
+                "item_name": "Idli Sambhar",
+                "quantity": 2,
+                "price": 90.0,
+                "total": 180.0
+            },
+            {
+                "item_id": "BV802",
+                "item_name": "Hot Coffee",
+                "quantity": 2,
+                "price": 100.0,
+                "total": 200.0
+            }
+        ],
+        "total_bill": 380.0,
+        "status": "Pending"
     }
 ]
