@@ -1,0 +1,2 @@
+01-04-2026 00:20:10 | Booking ID: 21743041 | Name: Sonali Shahi | Table: T3 | Status: Booked
+01-04-2026 00:20:49 | Booking ID: 33181705 | Name: Sonali Shahi | Table: T1 | Status: Cancelled

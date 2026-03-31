@@ -1,0 +1,2 @@
+31-03-2026 23:51:54 | Order ID: 6474642175 | Subtotal: Rs300.0 | GST: Rs15.00 | Total: Rs315.00 | Status: Completed
+31-03-2026 23:52:52 | Order ID: 2578321218 | Subtotal: Rs380.0 | GST: Rs19.00 | Total: Rs399.00 | Status: Pending
