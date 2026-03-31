@@ -1,0 +1,24 @@
+[
+    {
+        "booking_id": "38609570",
+        "customer_name": "Aastha Dhaka",
+        "date": "01-04-2026",
+        "slot": "10:00 AM - 12:00 PM",
+        "tables": [
+            "T9"
+        ],
+        "seats": 10,
+        "status": "Cancelled"
+    },
+    {
+        "booking_id": "98610929",
+        "customer_name": "Khusboo",
+        "date": "01-04-2026",
+        "slot": "10:00 AM - 12:00 PM",
+        "tables": [
+            "T1"
+        ],
+        "seats": 2,
+        "status": "Booked"
+    }
+]
