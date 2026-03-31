@@ -3,6 +3,7 @@ import uuid
 from datetime import datetime, timedelta
 from validation.auth_validation import Name_validation
 from validation.common_validation import CommonValidation
+import os
 
 class TableOperations:
     TABLES = [
@@ -25,6 +26,19 @@ class TableOperations:
         "6:00 PM - 8:00 PM",
         "8:00 PM - 10:00 PM"
     ]
+
+    def __init__(self):
+        os.makedirs("App/logs", exist_ok=True)
+
+    def write_booking_log(self,booking_id, customer_name, table_no, status):
+        """Append booking info to log file"""
+        now = datetime.now()
+        date_time = now.strftime("%d-%m-%Y %H:%M:%S")
+        log_file = "App/logs/booking_logs.txt"
+
+        with open(log_file, "a") as file:
+            file.write(f"{date_time} | Booking ID: {booking_id} | "
+                   f"Name: {customer_name} | Table: {table_no} | Status: {status}\n")
 
     def read_data(self):
         try:
@@ -189,6 +203,14 @@ class TableOperations:
         print(f"Table      : {selected_table['table_id']}")
         print("=" * 65)
 
+        booking_id = booking["booking_id"]
+        customer_name = booking["customer_name"]
+        table_no = booking["tables"][0]
+        status = booking["status"]
+
+
+        self.write_booking_log(booking_id, customer_name, table_no, status)
+
     def view_bookings(self):
         data = self.read_data()
 
@@ -222,6 +244,14 @@ class TableOperations:
                 b["status"] = "Cancelled"
                 self.write_data(data)
                 print("Booking cancelled")
+
+                booking_id = b["booking_id"]
+                customer_name = b["customer_name"]
+                table_no = b["tables"][0]  # assuming single table
+                status = b["status"]
+
+                self.write_booking_log(booking_id, customer_name, table_no, status)
+            
                 return
 
         print("Booking not found")
