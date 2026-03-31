@@ -12,5 +12,12 @@
         "email": "anshika101@gmail.com",
         "password": "Anshika@234",
         "role": "staff"
+    },
+    {
+        "id": "150807",
+        "name": "Niharika",
+        "email": "niharika123@gmail.com",
+        "password": "Niharika123@",
+        "role": "admin"
     }
 ]
