@@ -57,3 +57,34 @@ class CommonValidation:
             return None
 
         return int(order_id)
+    
+    def validate_staff_id(self, staff_id):
+        if not staff_id.strip():
+            print("Staff ID cannot be empty")
+            return None
+
+        staff_id = staff_id.strip().upper()
+
+        if not staff_id.startswith("ST") or not staff_id[2:].isdigit():
+            print("Invalid Staff ID format (Example: ST30818)")
+            return None
+  
+        return staff_id
+    
+    def validate_salary(self, salary):
+        if not salary.strip():
+            print("Salary cannot be empty")
+            return None
+
+        try:
+            salary = float(salary)
+
+            if salary <= 0:
+                print("Salary must be greater than 0")
+                return None
+
+            return salary
+
+        except:
+            print("Invalid salary! Enter numbers only.")
+            return None
