@@ -54,13 +54,8 @@ class Admin_dashboard:
                 TableDashboard().show_menu()
 
             elif validated_choice == 6:
-                order_id = input("Enter Order ID: ")
-                order_id = validator.validate_id(order_id, "Order ID")
-
-                if order_id is None:
-                    continue
                 print("\nGenerating Bill...\n")
-                BillGenerator().generate_bill(order_id)
+                BillGenerator().generate_bill()
             elif validated_choice == 7:
                 print("Logout")
                 break
