@@ -1,11 +1,25 @@
 from datetime import datetime
 from order.order_operation import OrderOperations 
 from validation.common_validation import CommonValidation 
+import os
 
+os.makedirs("App/logs", exist_ok=True)
 class BillGenerator:
 
     def __init__(self):
         self.order_ops = OrderOperations()
+
+    def write_log(self, order_id, subtotal, gst, total, status):
+        """Append bill info to log file"""
+        now = datetime.now()
+        date_time = now.strftime("%d-%m-%Y %H:%M:%S")
+        log_file = "App/logs/bill_logs.txt"
+
+        with open(log_file, "a") as file:  
+            file.write(f"{date_time} | Order ID: {order_id} | "
+                       f"Subtotal: Rs{subtotal} | GST: Rs{gst:.2f} | "
+                       f"Total: Rs{total:.2f} | Status: {status}\n")
+
 
     def generate_bill(self,order_id=None):
         
@@ -73,3 +87,5 @@ class BillGenerator:
         print(f"Status : {order['status']}")
         print("\nThank You! Visit Again ")
         print("=" * 50)
+
+        self.write_log(order_id, subtotal, gst, final_total, order['status'])
