@@ -20,5 +20,27 @@
         ],
         "seats": 2,
         "status": "Booked"
+    },
+    {
+        "booking_id": "33181705",
+        "customer_name": "Sonali Shahi",
+        "date": "02-04-2026",
+        "slot": "12:00 PM - 2:00 PM",
+        "tables": [
+            "T1"
+        ],
+        "seats": 2,
+        "status": "Cancelled"
+    },
+    {
+        "booking_id": "21743041",
+        "customer_name": "Sonali Shahi",
+        "date": "02-04-2026",
+        "slot": "12:00 PM - 2:00 PM",
+        "tables": [
+            "T3"
+        ],
+        "seats": 4,
+        "status": "Booked"
     }
 ]
