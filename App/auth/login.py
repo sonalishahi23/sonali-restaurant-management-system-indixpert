@@ -35,27 +35,32 @@ class Login:
             print("No users registered")
             return
         
-        found_email=False
-        for user in data:
-            if user["email"] == email and user["password"] == password:
-                found_email=True
-                print("\n" + "-" * 60)
-                print(f"Login Successful! Welcome, {user['name']} ")
-                print("-" * 60)
-                
-                if user["role"] == "admin":
-                    print("Redirecting to Admin Dashboard...\n")
-                    admin = Admin_dashboard()
-                    admin.show_dashboard()
+        found_email = False
+        password_correct = False
 
-                elif user["role"] == "staff":
-                    print("Redirecting to Staff Dashboard...\n")
-                    staff = StaffDashboard()
-                    staff.show_menu()
-                return
-            else:
-                print("Invalid Email or Password")
-                print("-" * 60)
-        
+        for user in data:
+            if user["email"] == email:
+                found_email = True
+                if user["password"] == password:
+                    password_correct = True
+                    print("\n" + "-" * 60)
+                    print(f"Login Successful! Welcome, {user['name']} ")
+                    print("-" * 60)
+            
+                    if user["role"] == "admin":
+                        print("Redirecting to Admin Dashboard...\n")
+                        admin = Admin_dashboard()
+                        admin.show_dashboard()
+
+                    elif user["role"] == "staff":
+                        print("Redirecting to Staff Dashboard...\n")
+                        staff = StaffDashboard()
+                        staff.show_menu()
+                        return  
+                    break  
+
+
         if not found_email:
             print("Email not registered. Please sign up first.")
+        elif not password_correct:
+            print("Invalid Email or Password")
