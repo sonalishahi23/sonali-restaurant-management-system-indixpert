@@ -131,7 +131,7 @@ class OrderOperations:
     
     def update_order_status(self, order_id):
         orders = self.read_orders()
-        validator=CommonValidation()
+        validator=CommonValidation() 
         for order in orders:
             if order["order_id"] == order_id:
                 print("1. Pending\n2. Completed\n3. Cancelled")
