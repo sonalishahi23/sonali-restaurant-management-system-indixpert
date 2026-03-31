@@ -45,3 +45,15 @@ class CommonValidation:
             return None
 
         return item_id
+    
+    def validate_order_id(self, order_id):
+    
+        if not order_id.isdigit():
+            print("Order ID must be numeric")
+            return None
+
+        if len(order_id) != 10:
+            print("Order ID must be 10 digits")
+            return None
+
+        return int(order_id)
