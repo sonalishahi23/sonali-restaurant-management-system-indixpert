@@ -1,0 +1,3 @@
+01-04-2026 18:25:39 | Order ID: 1722493221 | Action: Item Added | Total: Rs320.0
+01-04-2026 18:26:41 | Order ID: 1722493221 | Action: Item Added | Total: Rs480.0
+01-04-2026 18:27:33 | Order ID: 1722493221 | Action: Status Updated to Completed | Total: Rs480.0
