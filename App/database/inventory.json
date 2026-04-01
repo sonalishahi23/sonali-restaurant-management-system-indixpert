@@ -1,0 +1,252 @@
+[
+    {
+        "item_id": 1,
+        "item_name": "Milk",
+        "quantity": 50
+    },
+    {
+        "item_id": 2,
+        "item_name": "Butter",
+        "quantity": 30
+    },
+    {
+        "item_id": 3,
+        "item_name": "Cheese",
+        "quantity": 25
+    },
+    {
+        "item_id": 4,
+        "item_name": "Paneer",
+        "quantity": 40
+    },
+    {
+        "item_id": 5,
+        "item_name": "Cream",
+        "quantity": 20
+    },
+    {
+        "item_id": 6,
+        "item_name": "Curd",
+        "quantity": 35
+    },
+    {
+        "item_id": 7,
+        "item_name": "Wheat Flour",
+        "quantity": 60
+    },
+    {
+        "item_id": 8,
+        "item_name": "Maida",
+        "quantity": 50
+    },
+    {
+        "item_id": 9,
+        "item_name": "Rice",
+        "quantity": 80
+    },
+    {
+        "item_id": 10,
+        "item_name": "Basmati Rice",
+        "quantity": 40
+    },
+    {
+        "item_id": 11,
+        "item_name": "Suji",
+        "quantity": 30
+    },
+    {
+        "item_id": 12,
+        "item_name": "Besan",
+        "quantity": 25
+    },
+    {
+        "item_id": 13,
+        "item_name": "Potato",
+        "quantity": 100
+    },
+    {
+        "item_id": 14,
+        "item_name": "Onion",
+        "quantity": 90
+    },
+    {
+        "item_id": 15,
+        "item_name": "Tomato",
+        "quantity": 80
+    },
+    {
+        "item_id": 16,
+        "item_name": "Capsicum",
+        "quantity": 40
+    },
+    {
+        "item_id": 17,
+        "item_name": "Cabbage",
+        "quantity": 30
+    },
+    {
+        "item_id": 18,
+        "item_name": "Carrot",
+        "quantity": 35
+    },
+    {
+        "item_id": 19,
+        "item_name": "Peas",
+        "quantity": 40
+    },
+    {
+        "item_id": 20,
+        "item_name": "Corn",
+        "quantity": 30
+    },
+    {
+        "item_id": 21,
+        "item_name": "Garlic",
+        "quantity": 25
+    },
+    {
+        "item_id": 22,
+        "item_name": "Ginger",
+        "quantity": 20
+    },
+    {
+        "item_id": 23,
+        "item_name": "Green Chilli",
+        "quantity": 20
+    },
+    {
+        "item_id": 24,
+        "item_name": "Oil",
+        "quantity": 40
+    },
+    {
+        "item_id": 25,
+        "item_name": "Salt",
+        "quantity": 20
+    },
+    {
+        "item_id": 26,
+        "item_name": "Sugar",
+        "quantity": 30
+    },
+    {
+        "item_id": 27,
+        "item_name": "Turmeric",
+        "quantity": 15
+    },
+    {
+        "item_id": 28,
+        "item_name": "Red Chilli Powder",
+        "quantity": 15
+    },
+    {
+        "item_id": 29,
+        "item_name": "Coriander Powder",
+        "quantity": 20
+    },
+    {
+        "item_id": 30,
+        "item_name": "Garam Masala",
+        "quantity": 15
+    },
+    {
+        "item_id": 31,
+        "item_name": "Jeera",
+        "quantity": 15
+    },
+    {
+        "item_id": 32,
+        "item_name": "Pizza Base",
+        "quantity": 30
+    },
+    {
+        "item_id": 33,
+        "item_name": "Pasta",
+        "quantity": 40
+    },
+    {
+        "item_id": 34,
+        "item_name": "Noodles",
+        "quantity": 40
+    },
+    {
+        "item_id": 35,
+        "item_name": "Burger Bun",
+        "quantity": 30
+    },
+    {
+        "item_id": 36,
+        "item_name": "Sandwich Bread",
+        "quantity": 30
+    },
+    {
+        "item_id": 37,
+        "item_name": "Mayonnaise",
+        "quantity": 20
+    },
+    {
+        "item_id": 38,
+        "item_name": "Ketchup",
+        "quantity": 25
+    },
+    {
+        "item_id": 39,
+        "item_name": "Chicken",
+        "quantity": 40
+    },
+    {
+        "item_id": 40,
+        "item_name": "Eggs",
+        "quantity": 60
+    },
+    {
+        "item_id": 41,
+        "item_name": "Tea Leaves",
+        "quantity": 20
+    },
+    {
+        "item_id": 42,
+        "item_name": "Coffee",
+        "quantity": 20
+    },
+    {
+        "item_id": 43,
+        "item_name": "Chocolate Syrup",
+        "quantity": 15
+    },
+    {
+        "item_id": 44,
+        "item_name": "Mango Pulp",
+        "quantity": 20
+    },
+    {
+        "item_id": 45,
+        "item_name": "Cocoa Powder",
+        "quantity": 15
+    },
+    {
+        "item_id": 46,
+        "item_name": "Baking Powder",
+        "quantity": 10
+    },
+    {
+        "item_id": 47,
+        "item_name": "Vanilla Essence",
+        "quantity": 10
+    },
+    {
+        "item_id": 48,
+        "item_name": "Ice Cream Base",
+        "quantity": 20
+    },
+    {
+        "item_id": 49,
+        "item_name": "Dry Fruits",
+        "quantity": 15
+    },
+    {
+        "item_id": 50,
+        "item_name": "Lemon",
+        "quantity": 30
+    }
+]
