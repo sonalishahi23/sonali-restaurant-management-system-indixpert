@@ -5,6 +5,7 @@ from staff_management.staff_manage import StaffManagement
 from Booking_Table.table_dashboard import TableDashboard
 from billing_payment.generate_bill import BillGenerator
 from validation.common_validation import CommonValidation
+from Inventory.inventory_dashboard import InventoryDashboard
 
 
 class Admin_dashboard:
@@ -22,13 +23,14 @@ class Admin_dashboard:
             print("4. View Reports")
             print("5. Manage Table Booking")
             print("6. Generate Bill")
-            print("7. Logout")
+            print("7. Inventory Management")
+            print("8. Logout")
             print("-" * 65)
 
             
 
-            choice = input("Enter your choice (1-7): ")
-            validated_choice = validator.validate_choice(choice, 1, 7)
+            choice = input("Enter your choice (1-8): ")
+            validated_choice = validator.validate_choice(choice, 1, 8)
 
             if validated_choice is None:
                 continue
@@ -56,7 +58,12 @@ class Admin_dashboard:
             elif validated_choice == 6:
                 print("\nGenerating Bill...\n")
                 BillGenerator().generate_bill()
-            elif validated_choice == 7:
+
+            elif validated_choice == 7:   
+                print("\nOpening Inventory Management...\n")
+                InventoryDashboard().show_menu()
+
+            elif validated_choice == 8:
                 print("Logout")
                 break
             else:
