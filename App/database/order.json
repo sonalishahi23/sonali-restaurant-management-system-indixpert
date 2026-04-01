@@ -75,5 +75,26 @@
         ],
         "total_bill": 380.0,
         "status": "Pending"
+    },
+    {
+        "order_id": 1722493221,
+        "items": [
+            {
+                "item_id": "LN203",
+                "item_name": "Chole Chawal",
+                "quantity": 2,
+                "price": 160.0,
+                "total": 320.0
+            },
+            {
+                "item_id": "DS903",
+                "item_name": "Ice Cream",
+                "quantity": 2,
+                "price": 80.0,
+                "total": 160.0
+            }
+        ],
+        "total_bill": 480.0,
+        "status": "Completed"
     }
 ]
