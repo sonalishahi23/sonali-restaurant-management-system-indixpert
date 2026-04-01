@@ -2,7 +2,23 @@ import json
 import uuid
 from menu.menu_operation import MenuOperations
 from validation.common_validation import CommonValidation
+from datetime import datetime
+import os
+
 class OrderOperations:
+
+    def write_order_log(self, order_id, action, total_bill=None):
+
+        os.makedirs("App/logs", exist_ok=True)
+        log_file = "App/logs/order_logs.txt"
+
+        now = datetime.now()
+        date_time = now.strftime("%d-%m-%Y %H:%M:%S")
+
+        total_info = f" | Total: Rs{total_bill}" if total_bill else ""
+
+        with open(log_file, "a") as file:
+            file.write(f"{date_time} | Order ID: {order_id} | Action: {action}{total_info}\n")
 
     def read_orders(self):
         try:
@@ -92,6 +108,7 @@ class OrderOperations:
         order["total_bill"] = sum(i["total"] for i in order["items"])
 
         self.write_orders(orders)
+        self.write_order_log(order_id, "Item Added", order["total_bill"])
         print(f"Item added to Order ID: {order_id}. Current Total: {order['total_bill']}")
 
     
@@ -154,6 +171,7 @@ class OrderOperations:
                     return
                 self.write_orders(orders)
                 print("Status Updated Successfully")
+                self.write_order_log(order_id, f"Status Updated to {order['status']}", order["total_bill"])
                 return
         print("Order not found")
 
@@ -164,6 +182,7 @@ class OrderOperations:
         if len(new_orders) != len(orders):
             self.write_orders(new_orders)
             print(f"Order ID {order_id} deleted")
+            self.write_order_log(order_id, "Order Deleted")
         else:
             print("Order not found")
     
@@ -195,6 +214,7 @@ class OrderOperations:
                     removed = order["items"].pop(choice - 1)
                     order["total_bill"] = sum(i["total"] for i in order["items"])
                     self.write_orders(orders)
+                    self.write_order_log(order_id, f"Item Removed: {removed['item_name']}", order["total_bill"])
                     print(f"\nRemoved {removed['item_name']}")
                     print(f"New Total: ₹{order['total_bill']}")
                     break
