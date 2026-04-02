@@ -34,9 +34,16 @@ class OrderDashboard:
                 order_id = self.order.start_order()
                 print(f"Your Order ID is: {order_id}")
                 
+                added_any = False
+
                 while True:
                     print("\nAdd Items to Order")
-                    self.order.add_item_to_order(order_id)
+                    result = self.order.add_item_to_order(order_id)
+
+                    if result:
+                        added_any = True
+                    else:
+                        print("Item not added due to stock issue")
 
                     while True:
                         more = input("Would the customer like to add another item? (yes/no): ").lower()
@@ -44,7 +51,10 @@ class OrderDashboard:
                         if more == "yes":
                             break
                         elif more == "no":
-                            print("\nOrder Completed\n")
+                            if added_any:
+                                print("\nOrder Completed \n")
+                            else:
+                                print("\nOrder Failed \n")
                             break
                         else:
                             print("Please enter 'yes' or 'no'")

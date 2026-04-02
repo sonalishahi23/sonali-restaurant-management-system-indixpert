@@ -97,19 +97,12 @@ class OrderOperations:
         
         total = quantity * price
 
-        success = True
-
-        for _ in range(quantity):
-            if not self.reduce_inventory(item_name):
-                success = False
-                break
-
-        if not success:
-            print("Order failed due to insufficient stock!")
-            return
-
-
         
+
+        if not self.reduce_inventory(item_name,quantity):
+            print("Order failed due to insufficient stock!")
+            return False
+
         order["items"].append({
             "item_id": item_id,
             "item_name": item_name,
@@ -123,6 +116,7 @@ class OrderOperations:
         self.write_orders(orders)
         self.write_order_log(order_id, "Item Added", order["total_bill"])
         print(f"Item added to Order ID: {order_id}. Current Total: {order['total_bill']}")
+        return True
 
     
     def view_order(self, order_id):
@@ -237,7 +231,7 @@ class OrderOperations:
             except:
                 print("Invalid input! Enter numbers only.")
 
-    def reduce_inventory(self, dish_name):
+    def reduce_inventory(self, dish_name, quantity):
         inv = InventoryOperations()
         data = inv.read_inventory()
 
@@ -246,14 +240,14 @@ class OrderOperations:
         for ing in ingredients:
             for item in data:
                 if item["item_name"] == ing:
-                    if item["quantity"] <= 0:
+                    if item["quantity"] < quantity:
                         print(f"{ing} is out of stock!")
                         return False
         
         for ing in ingredients:
             for item in data:
                 if item["item_name"] == ing:
-                    item["quantity"] -= 1
+                    item["quantity"] -= quantity
 
         inv.write_inventory(data)
         return True
