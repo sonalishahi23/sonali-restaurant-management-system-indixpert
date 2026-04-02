@@ -2,12 +2,12 @@
     {
         "item_id": 1,
         "item_name": "Milk",
-        "quantity": 50
+        "quantity": 44
     },
     {
         "item_id": 2,
         "item_name": "Butter",
-        "quantity": 24
+        "quantity": 30
     },
     {
         "item_id": 3,
@@ -17,12 +17,12 @@
     {
         "item_id": 4,
         "item_name": "Paneer",
-        "quantity": 38
+        "quantity": 40
     },
     {
         "item_id": 5,
         "item_name": "Cream",
-        "quantity": 18
+        "quantity": 20
     },
     {
         "item_id": 6,
@@ -32,7 +32,7 @@
     {
         "item_id": 7,
         "item_name": "Wheat Flour",
-        "quantity": 56
+        "quantity": 60
     },
     {
         "item_id": 8,
@@ -72,7 +72,7 @@
     {
         "item_id": 15,
         "item_name": "Tomato",
-        "quantity": 78
+        "quantity": 80
     },
     {
         "item_id": 16,
@@ -102,7 +102,7 @@
     {
         "item_id": 21,
         "item_name": "Garlic",
-        "quantity": 23
+        "quantity": 25
     },
     {
         "item_id": 22,
@@ -117,17 +117,17 @@
     {
         "item_id": 24,
         "item_name": "Oil",
-        "quantity": 34
+        "quantity": 40
     },
     {
         "item_id": 25,
         "item_name": "Salt",
-        "quantity": 14
+        "quantity": 20
     },
     {
         "item_id": 26,
         "item_name": "Sugar",
-        "quantity": 30
+        "quantity": 24
     },
     {
         "item_id": 27,
@@ -207,7 +207,7 @@
     {
         "item_id": 42,
         "item_name": "Coffee",
-        "quantity": 20
+        "quantity": 14
     },
     {
         "item_id": 43,
@@ -237,7 +237,7 @@
     {
         "item_id": 48,
         "item_name": "Ice Cream Base",
-        "quantity": 20
+        "quantity": 14
     },
     {
         "item_id": 49,
@@ -247,11 +247,6 @@
     {
         "item_id": 50,
         "item_name": "Lemon",
-        "quantity": 30
-    },
-    {
-        "item_id": 51,
-        "item_name": "Egg",
         "quantity": 30
     }
 ]
