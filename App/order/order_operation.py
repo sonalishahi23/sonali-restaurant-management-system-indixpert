@@ -4,6 +4,8 @@ from menu.menu_operation import MenuOperations
 from validation.common_validation import CommonValidation
 from datetime import datetime
 import os
+from Inventory.dish_ingredients import dish_ingredients
+from Inventory.inventory_operation import InventoryOperations
 
 class OrderOperations:
 
@@ -95,6 +97,18 @@ class OrderOperations:
         
         total = quantity * price
 
+        success = True
+
+        for _ in range(quantity):
+            if not self.reduce_inventory(item_name):
+                success = False
+                break
+
+        if not success:
+            print("Order failed due to insufficient stock!")
+            return
+
+
         
         order["items"].append({
             "item_id": item_id,
@@ -103,7 +117,6 @@ class OrderOperations:
             "price": price,
             "total": total
         })
-
         
         order["total_bill"] = sum(i["total"] for i in order["items"])
 
@@ -223,4 +236,27 @@ class OrderOperations:
 
             except:
                 print("Invalid input! Enter numbers only.")
+
+    def reduce_inventory(self, dish_name):
+        inv = InventoryOperations()
+        data = inv.read_inventory()
+
+        ingredients = dish_ingredients.get(dish_name, [])
+
+        for ing in ingredients:
+            for item in data:
+                if item["item_name"] == ing:
+                    if item["quantity"] <= 0:
+                        print(f"{ing} is out of stock!")
+                        return False
+        
+        for ing in ingredients:
+            for item in data:
+                if item["item_name"] == ing:
+                    item["quantity"] -= 1
+
+        inv.write_inventory(data)
+        return True
+
+        
     
